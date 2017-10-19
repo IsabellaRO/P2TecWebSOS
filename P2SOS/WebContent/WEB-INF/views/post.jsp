@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://www.springframework.org/tags/form"
+prefix="form" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -9,11 +11,20 @@
   
   <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="css/style.css">
+
+    <style type="text/css">
+        <%@include file="css/style.css"%>
+        <%@include file="css/fontselect-default.css"%>
+    </style>
+
+    <script type="text/javascript">
+    	<%@include file="js/jquery.fontselect.js"%>
+    </script>
+
+
 	
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/fontselect-default.css" />
-    <script src="js/jquery.fontselect.js"></script>
+
     <script>
       $(function(){
         $('#font').fontselect();

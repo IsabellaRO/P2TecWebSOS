@@ -13,7 +13,7 @@ public class UsuariosDAO {
 		public UsuariosDAO() {
 			try {
 				Class.forName("com.mysql.jdbc.Driver");
-				connection = DriverManager.getConnection("jdbc:mysql://localhost/p2", "root", "adgjlra1");
+				connection = DriverManager.getConnection("jdbc:mysql://localhost/p2", "root", "rangobom971025");
 			} 
 			catch (SQLException | ClassNotFoundException e) {e.printStackTrace();}
 		}

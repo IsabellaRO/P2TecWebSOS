@@ -2,6 +2,8 @@ package mvc.controller;
 
 import java.io.IOException;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -24,4 +26,18 @@ public class LoginController {
 	 	dao.adiciona(usuario);
 	 	return "redirect:feed";
  	} 
+
+	@RequestMapping("loginForm")
+	public String loginForm() {
+		return "login";
+	}
+
+	@RequestMapping("efetuaLogin")
+	public String efetuaLogin(Usuarios usuario, HttpSession session) {
+		if(new UsuariosDAO().existeUsuario(usuario)) {
+			session.setAttribute("usuarioLogado", usuario.getUsername());
+			return "meuperfil";
+	}
+	return "redirect:login";
+	}
 }
